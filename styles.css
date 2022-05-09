@@ -1,0 +1,237 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --card-background--page-title: hsl(300, 43%, 22%);
+  --card-title-description: hsl(333, 80%, 67%);
+  --page-title-description: hsl(303, 10%, 53%);
+  --background-white: hsl(0, 0%, 100%);
+  --card-text-title-testimonials: hsl(300, 24%, 96%);
+}
+
+main {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.7rem 3rem 1.7rem;
+  line-height: 1.5rem;
+  background-color: white;
+
+  background-image: url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-size: contain;
+  min-height: 100%;
+}
+
+.title-container {
+  width: 100%;
+}
+
+.title-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--card-background--page-title);
+  line-height: 2rem;
+}
+
+.title-description {
+  color: var(--page-title-description);
+  font-size: 1.1rem;
+}
+
+.ratings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.each-rating-container {
+  background-color: var(--card-text-title-testimonials);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  color: var(--card-background--page-title);
+  font-weight: 700;
+}
+
+.each-rating-container * {
+  margin: 0;
+}
+
+.star-container {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.cards-container-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.each-card-container {
+  background-color: var(--card-background--page-title);
+  color: var(--background-white);
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+  line-height: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-data-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+
+.user-data {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 0.2rem;
+}
+
+.user-data * {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.user-data p {
+  color: var(--card-title-description);
+  font-weight: 400;
+}
+
+.testimonial {
+  text-align: left;
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  color: var(--card-text-title-testimonials);
+}
+
+footer {
+  text-align: center;
+  color: var(black);
+  font-size: 0.7rem;
+}
+
+footer a {
+  color: hsl(14, 88%, 65%);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url("./images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+
+    width: 1200px;
+    max-width: 90%;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .title-container {
+    max-width: 440px;
+    text-align: left;
+  }
+  .title-container h1 {
+    width: 80%;
+    font-size: 3.5rem;
+    line-height: 2.5rem;
+  }
+  .ratings-container {
+    max-width: 440px;
+  }
+  .each-rating-container {
+  }
+  .rating-one {
+    position: relative;
+    left: -50px;
+  }
+  .rating-three {
+    position: relative;
+    left: 50px;
+  }
+  .cards-container-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    max-width: max-content;
+    gap: 1rem;
+  }
+  .each-card-container {
+    max-width: 350px;
+  }
+  .card-one {
+    position: relative;
+    top: -30px;
+  }
+  .card-three {
+    position: relative;
+    top: 30px;
+  }
+}
