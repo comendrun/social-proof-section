@@ -208,6 +208,10 @@ footer a {
     max-width: 440px;
   }
   .each-rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .rating-one {
     position: relative;
